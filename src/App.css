@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  overflow-y: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.MenuBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 30px;
+  min-width: 1200px;
+  width: 70vh;
+  height: 200px;
+  color: black;
 }
 
-.App-link {
-  color: #61dafb;
+.home-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bigshot-One";
+  color: black;
+  font-size: 48px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.MiddleContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Big-shoulders-inline";
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  height: 100%;
+}
+
+.tail-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Big-shoulders-text";
+  color: black;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+@media (max-width: 600px) {
+  .Container {
+    overflow-y: auto;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+@font-face {
+  font-family: "Bigshot-One";
+  src: local("Bigshot-One"),
+    url(assets/fonts/BigshotOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Big-shoulders-inline";
+  src: local("Big-shoulders"),
+    url(assets/fonts/BigShouldersInlineDisplay-VariableFont_wght.ttf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Big-shoulders-text";
+  src: local("Big-shoulders"),
+    url(assets/fonts/BigShouldersText-VariableFont_wght.ttf) format("opentype");
 }
