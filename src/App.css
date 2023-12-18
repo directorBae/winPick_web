@@ -1,0 +1,110 @@
+a {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.MenuBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  min-width: 1200px;
+  width: 70vw;
+  height: 100px;
+  color: black;
+}
+
+.home-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bigshot-One";
+  color: whitesmoke;
+  font-size: 48px;
+  text-shadow: 2px 4px 5px rgba(255, 255, 255, 0.4);
+}
+
+.MiddleContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Big-shoulders-inline";
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 600;
+  height: 100%;
+}
+
+.tail-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Big-shoulders-text";
+  color: whitesmoke;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.ContentArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 3300px;
+}
+
+@font-face {
+  font-family: "Bigshot-One";
+  src: local("Bigshot-One"),
+    url(assets/fonts/BigshotOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Big-shoulders-inline";
+  src: local("Big-shoulders-inline"),
+    url(assets/fonts/BigShouldersInlineDisplay-VariableFont_wght.ttf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Big-shoulders-text";
+  src: local("Big-shoulders-text"),
+    url(assets/fonts/BigShouldersText-VariableFont_wght.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Italiana";
+  src: local("Italiana"),
+    url(assets/fonts/Italiana-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Metal-Mania";
+  src: local("Metal-Mania"),
+    url(assets/fonts/MetalMania-Regular.ttf) format("truetype");
+}
+
+.backGroundImage {
+  width: 100%;
+  height: 3500px;
+  background-color: #090909;
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: top;
+}
