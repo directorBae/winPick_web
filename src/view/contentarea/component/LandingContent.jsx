@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ContextData from "../../../model/context";
+import gifImage from "../../../assets/images/pos.gif";
 
 const ContentStyle = styled.div`
   padding-top: 30px;
@@ -33,10 +34,10 @@ const LandingContent = () => (
           left: 0,
           top: 11,
           position: "absolute",
-          background: "#D9D9D9",
-          border: "1px black solid",
         }}
-      />
+      >
+        <img src={gifImage} alt="gif" style={{ width: 329, height: 331 }} />
+      </div>
       <HeadingStyle>
         <div
           style={{

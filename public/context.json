@@ -5,7 +5,7 @@
   },
   "HowItWorks": {
     "heading": "How it works",
-    "context": "WinPick is a prediction solution for League of Legends."
+    "context": "WinPick is a prediction solution for League of Legends. Our solution makes predictions of League of Legends games by using Reinforcement Learning. We can give you an advice of better champion picks and ban picks before actual game is started. We can also give you a prediction of win rate of each team. We can predict these all of things by training our model and qualified data. We are trying to make a better prediction model by using more data and better algorithm."
   },
   "Demo": {
     "heading": "Demo",
@@ -39,7 +39,7 @@
   },
   "AboutUs": {
     "heading": "About Us",
-    "context": "We are a team of people who are passionate about League of Legends and Machine Learning. We are trying to make a better predictions of League of Legends games."
+    "context": "We are a team of people who are passionate about League of Legends and Machine Learning. We are trying to make a better predictions of League of Legends games. \nWe are research lab in UNIST, South Korea."
   },
   "ContactUs": {
     "heading": "Contact Us",
