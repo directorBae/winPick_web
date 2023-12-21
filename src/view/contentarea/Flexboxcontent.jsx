@@ -23,8 +23,7 @@ const FlexBoxGrid = styled.div`
   margin: 100px 40px 20px 40px;
   justify-content: center;
   align-items: center;
-  font-family: "Pretendard", sans-serif;
-  font-weight: 700;
+  font-family: "Bai-Jamjuree", sans-serif;
   white-space: pre-wrap;
   font-size: 20px;
   color: whitesmoke;

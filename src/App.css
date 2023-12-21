@@ -108,3 +108,9 @@ a {
   background-size: fill;
   background-position: top;
 }
+
+@font-face {
+  font-family: "Bai-Jamjuree";
+  src: local("Bai-Jamjuree"),
+    url(assets/fonts/BaiJamjuree-ExtraLight.ttf) format("truetype");
+}

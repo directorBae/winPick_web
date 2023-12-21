@@ -14,10 +14,17 @@ function Pricing() {
           <ContextCard
             key={index}
             heading={data[policy].heading}
-            context={data[policy].context.join("\n")}
+            image={data[policy].heading}
+            context={
+              <ul>
+                {data[policy].context.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            }
           />
         ))}
-        contextHeight={500}
+        contextHeight={600}
       />
     </div>
   );

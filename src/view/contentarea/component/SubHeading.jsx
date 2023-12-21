@@ -25,8 +25,7 @@ const SubContextContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Pretendard", sans-serif;
-  font-weight: 700;
+  font-family: "Bai-Jamjuree";
   white-space: pre-wrap;
   font-size: 20px;
   color: whitesmoke;
