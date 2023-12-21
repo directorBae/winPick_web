@@ -1,0 +1,51 @@
+{
+  "catchphrase": {
+    "heading": "Win a pick.",
+    "context": "Make pick smart. Take Advantage. Rank up. \nWin your pick and win the game. \nOnly in WinPick, the best prediction solution of LoL."
+  },
+  "HowItWorks": {
+    "heading": "How it works",
+    "context": "WinPick is a prediction solution for League of Legends."
+  },
+  "Demo": {
+    "heading": "Demo",
+    "context": "Try our demo solution by entering champion name."
+  },
+  "Pricing": {
+    "heading": "Pricing",
+    "context": {
+      "free": {
+        "heading": "Free",
+        "context": ["Only 5 per day", "Cannot buy Extra tokens", "Free Use"]
+      },
+      "premium": {
+        "heading": "Plus",
+        "context": [
+          "Better Prediction Quality",
+          "More free tokens usable",
+          "Chargable Extra Tokens",
+          "9.99$ per month"
+        ]
+      },
+      "enterprise": {
+        "heading": "Enterprise",
+        "context": [
+          "Fine-tuning and Personal fitting service provided.",
+          "Unlimited Use",
+          "Only Contact to Use"
+        ]
+      }
+    }
+  },
+  "AboutUs": {
+    "heading": "About Us",
+    "context": "We are a team of people who are passionate about League of Legends and Machine Learning. We are trying to make a better predictions of League of Legends games."
+  },
+  "ContactUs": {
+    "heading": "Contact Us",
+    "context": [
+      "If you have any questions, please contact us by email. We will reply as soon as possible.",
+      "E-mail: jooyeon.kim@unist.ac.kr"
+    ]
+  }
+}
