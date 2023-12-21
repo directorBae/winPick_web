@@ -11,7 +11,7 @@ const GridContainer = styled.div`
 `;
 
 // 검색 컴포넌트
-const SearchComponent = ({ champions, onSelection }) => {
+const SearchComponent = ({ champions, onSelection, className }) => {
   const [query, setQuery] = useState("");
   const [filteredResults, setFilteredResults] = useState([]);
   const [showResults, setShowResults] = useState(false); // 검색 결과 표시 여부
@@ -37,20 +37,23 @@ const SearchComponent = ({ champions, onSelection }) => {
 
   return (
     <div id="search-component">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      {showResults && (
-        <div className="search-results">
-          {filteredResults.map((result, index) => (
-            <div key={index} onClick={() => handleSelect(result)}>
-              {result}
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="query-container">
+        <input
+          className={className}
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        {showResults && (
+          <div className="search-results">
+            {filteredResults.map((result, index) => (
+              <div key={index} onClick={() => handleSelect(result)}>
+                {result}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
@@ -87,14 +90,16 @@ let Demo = () => {
 
   const generateRandomResult = () => {
     if (!allChampionsSelected()) {
-      setRandomResult("모든 챔피언을 선택해주세요.");
+      setRandomResult("Choose all champions");
     } else if (isDuplicatePresent()) {
       // 예: 랜덤한 챔피언 선택
-      setRandomResult("챔피언은 중복될 수 없습니다.");
+      setRandomResult("Champions cannot be duplicated");
     } else {
       const RedTeamWinRate = (40 + Math.random() * 20).toFixed(2);
       setRandomResult(
-        `레드 팀 승률: ${RedTeamWinRate}\n블루 팀 승률: ${100 - RedTeamWinRate}`
+        `Red Team Win Rate: ${RedTeamWinRate}\nBlue Team Win Rate: ${
+          100 - RedTeamWinRate
+        }`
       );
     }
   };
@@ -104,19 +109,26 @@ let Demo = () => {
       <SubHeading
         heading={ContextData.Demo.heading}
         context={
-          <GridContainer>
-            {searches.map((search, index) => (
-              <SearchComponent
-                key={index}
-                champions={champions}
-                onSelection={(value) => handleSelection(index, value)}
-              />
-            ))}
-            <button onClick={generateRandomResult}>랜덤 결과 생성</button>
-            {randomResult && <div>{randomResult}</div>}
-          </GridContainer>
+          <div>
+            <GridContainer>
+              {searches.map((search, index) => (
+                <SearchComponent
+                  className={`grid-item-${index % 2 === 0 ? "left" : "right"}`}
+                  key={index}
+                  champions={champions}
+                  onSelection={(value) => handleSelection(index, value)}
+                />
+              ))}
+            </GridContainer>
+            <button className="button-container" onClick={generateRandomResult}>
+              Predict Win Rate
+            </button>
+            <div className="result-container">
+              {randomResult && <div>{randomResult}</div>}
+            </div>
+          </div>
         }
-        contextHeight={800}
+        contextHeight={600}
       />
     </div>
   );

@@ -7,6 +7,7 @@ const ContactUs = () => (
     <SubHeading
       heading={ContextData.ContactUs.heading}
       context={ContextData.ContactUs.context.join("\n")}
+      contextHeight={300}
     />
   </div>
 );
