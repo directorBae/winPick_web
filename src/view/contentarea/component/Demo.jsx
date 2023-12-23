@@ -4,6 +4,8 @@ import SubHeading from "./SubHeading";
 import ContextData from "../../../model/context";
 import styled from "styled-components";
 
+const seedrandom = require("seedrandom");
+
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -95,7 +97,10 @@ let Demo = () => {
       // 예: 랜덤한 챔피언 선택
       setRandomResult("Champions cannot be duplicated");
     } else {
-      const RedTeamWinRate = (40 + Math.random() * 20).toFixed(2);
+      const rng = seedrandom(searches.join(""));
+      const random = rng();
+      console.log(rng);
+      const RedTeamWinRate = (40 + random * 20).toFixed(2);
       setRandomResult(
         `Red Team Win Rate: ${RedTeamWinRate}\nBlue Team Win Rate: ${
           100 - RedTeamWinRate
