@@ -26,8 +26,10 @@
 .result-container {
   position: absolute;
   width: 100%;
+  z-index: 0;
   height: auto;
-  top: 163px;
+  align-items: center;
+  top: 150px;
   text-align: center;
 }
 
@@ -53,6 +55,7 @@
 }
 
 input {
+  z-index: 1;
   border-radius: 3px;
   border: 2px solid #888;
   width: 250px;
@@ -80,4 +83,26 @@ input:focus {
   border: 2px solid #55f;
   position: absolute;
   right: 0px;
+}
+
+/* 로더 기본 스타일 */
+.loader {
+  position: absolute;
+  left: 47%;
+  border: 10px solid #f3f3f3; /* Light grey 배경 */
+  border-top: 10px solid #3498db; /* Blue 색상 */
+  border-radius: 50%; /* 원형 모양 */
+  width: 30px;
+  height: 30px;
+  animation: spin 3s linear infinite; /* 애니메이션 적용 */
+}
+
+/* Spin 애니메이션 */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

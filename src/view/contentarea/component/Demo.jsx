@@ -65,6 +65,7 @@ let Demo = () => {
   const [champions, setChampions] = useState([]);
   const [searches, setSearches] = useState(Array(10).fill(""));
   const [randomResult, setRandomResult] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("champion.txt")
@@ -91,21 +92,28 @@ let Demo = () => {
   };
 
   const generateRandomResult = () => {
+    setIsLoading(true);
     if (!allChampionsSelected()) {
+      setIsLoading(false);
       setRandomResult("Choose all champions");
     } else if (isDuplicatePresent()) {
-      // 예: 랜덤한 챔피언 선택
+      setIsLoading(false);
       setRandomResult("Champions cannot be duplicated");
     } else {
       const rng = seedrandom(searches.join(""));
       const random = rng();
       console.log(rng);
       const RedTeamWinRate = (40 + random * 20).toFixed(2);
-      setRandomResult(
-        `Red Team Win Rate: ${RedTeamWinRate}\nBlue Team Win Rate: ${
-          100 - RedTeamWinRate
-        }`
-      );
+
+      // 3초 후에 로딩 상태를 false로 변경하고 결과 데이터 업데이트
+      setTimeout(() => {
+        setIsLoading(false);
+        setRandomResult(
+          `Red Team Win Rate: ${RedTeamWinRate}\nBlue Team Win Rate: ${
+            100 - RedTeamWinRate
+          }`
+        );
+      }, 500 + Math.random() * 2500); // 3000밀리초 후에 실행
     }
   };
 
@@ -129,7 +137,17 @@ let Demo = () => {
               Predict Win Rate
             </button>
             <div className="result-container">
-              {randomResult && <div>{randomResult}</div>}
+              {
+                <div>
+                  {isLoading && randomResult ? (
+                    <div>
+                      <div className="loader"></div>
+                    </div>
+                  ) : (
+                    <div>{randomResult}</div>
+                  )}
+                </div>
+              }
             </div>
           </div>
         }
