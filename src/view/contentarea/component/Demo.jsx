@@ -65,7 +65,7 @@ let Demo = () => {
   const [champions, setChampions] = useState([]);
   const [searches, setSearches] = useState(Array(10).fill(""));
   const [randomResult, setRandomResult] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetch("champion.txt")
@@ -139,7 +139,7 @@ let Demo = () => {
             <div className="result-container">
               {
                 <div>
-                  {isLoading && randomResult ? (
+                  {isLoading === true ? (
                     <div>
                       <div className="loader"></div>
                     </div>
